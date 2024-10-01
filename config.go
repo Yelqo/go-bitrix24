@@ -8,9 +8,10 @@ const (
 // Methods
 
 const (
-	Auth      = "auth"
-	rest      = "/rest/"
-	UserAdmin = "user.admin.json"
+	Auth        = "auth"
+	rest        = "/rest/"
+	UserAdmin   = "user.admin.json"
+	UserCurrent = "user.current"
 
 	PlacementBind   = "placement.bind"
 	PlacementUnBind = "placement.unbind"

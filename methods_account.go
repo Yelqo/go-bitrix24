@@ -36,6 +36,19 @@ func (b24 *API) IsAdmin() (MainResult, error) {
 	return out, b24.callMethod(options)
 }
 
+func (b24 *API) CurrentUser() (MainResult, error) {
+	out := MainResult{}
+	options := callMethodOptions{
+		Method:  fiber.MethodGet,
+		BaseURL: UserCurrent,
+		In:      nil,
+		Out:     &out,
+		Params:  nil,
+	}
+
+	return out, b24.callMethod(options)
+}
+
 func (b24 *API) PlacementUnBind(handler, placement string) (UnBind, error) {
 	out := UnBind{}
 	// handler not required, if empty - all handlers will be removed
